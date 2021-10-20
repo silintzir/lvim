@@ -43,6 +43,8 @@ lvim.builtin.nvimtree.show_icons.git = 0
 local custom_gruvbox = require "custom_gruvbox"
 local green = custom_gruvbox.palette.green
 local darkgray = custom_gruvbox.palette.darkgray
+local red = custom_gruvbox.palette.red
+local blue = custom_gruvbox.palette.blue
 -- custom_gruvbox.theme.normal.c.bg = "none"
 -- custom_gruvbox.theme.inactive.c.bg = "none"
 -- custom_gruvbox.theme.command.c.bg = "none"
@@ -133,5 +135,7 @@ lvim.autocommands.custom_groups = {
     { "Filetype", "go", "setlocal ft=php ts=4 sw=4" },
     { "Colorscheme", "*", "hi BufferCurrent gui=bold guifg=#ec5f67" },
     { "Colorscheme", "*", "hi BufferTabpageFill guibg=none" },
-    { "Colorscheme", "*", "hi GitSignsAdd guibg=none" },
+    { "Colorscheme", "*", "hi GitSignsAdd guifg=" .. green .. " guibg=none" },
+    { "Colorscheme", "*", "hi GitSignsChange guifg=" .. blue .. " guibg=none" },
+    { "Colorscheme", "*", "hi GitSignsDelete guifg=" .. red .. " guibg=none" },
 }
